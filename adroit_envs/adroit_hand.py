@@ -188,7 +188,7 @@ class AdroitHandDoorEnv(MujocoEnv, EzPickle):
     def __init__(self, reward_type: str = "sparse", **kwargs):
         xml_file_path = path.join(
             path.dirname(path.realpath(__file__)),
-            "../assets/adroit_hand/adroit_door.xml",
+            "assets/adroit_hand/adroit_door.xml",
         )
         observation_space = spaces.Box(
             low=-np.inf, high=np.inf, shape=(39,), dtype=np.float64
