@@ -16,8 +16,9 @@ setup(
     packages=find_packages(),
     python_requires='<= 3.12',
     package_data={
-        'adroit_envs': ['adroit_envs/assets/*'],  # Include all files from assets/ directory
+        'adroit_envs': ['assets/*'],  # Use relative path from the 'adroit_envs' package
     },
+    include_package_data=True,
     install_requires=required,
     extras_require=extras,
     classifiers=[
