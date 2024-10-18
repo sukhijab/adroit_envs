@@ -351,7 +351,7 @@ class AdroitHandDoorEnv(MujocoEnv, EzPickle):
         if options is not None and "initial_state_dict" in options:
             self.set_env_state(options["initial_state_dict"])
             obs = self._get_obs()
-        info['success'] = 0
+        info['success'] = False
         return obs, info
 
     def reset_model(self):
